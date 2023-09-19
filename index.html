@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script defer src="./js/Dato.js"></script>
+
 </head>
+
 <body>
+
     <div class="cabecero">
         <div class="presupuesto">
             <div class="presupuesto_titulo">
@@ -28,6 +32,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="presupuesto_egreso limpiarEstilos">
                 <div class="presupuesto_egreso--texto">
                     Egresos
@@ -51,19 +56,19 @@
                     <option value="ingreso" selected>+</option>
                     <option value="egreso">-</option>
                 </select>
-                <input type="text" class="agregar_descripcion" id="descripcion" value="Agregar Descripción">
-                <input type="number" class="agregar_valor" value="0" step="any">
-                <button class="agregar_btn"><ion-icon name="checkmark-circle-outline"></ion-icon></button>
+                <input type="text" class="agregar_descripcion" id="descripcion" placeholder="Agregar Descripción">
+                <input type="number" class="agregar_valor" placeholder="valor" id="valor" step="any">
+                <button class="agregar_btn" onclick="agregarDato()"><ion-icon name="checkmark-circle-outline"></ion-icon></button>
             </div>
         </div>
     </form>
 
     <div class="contenedor limpiarEstilos">
-        <div class="ingreso">
+        <div id ="lista-ingresos" class="ingreso">
             <h2 class="ingreso_titulo">Ingresos</h2>
-            <div id="lista-ingresos">
+            <div id="limpiar_estilo">
                 <div class="elemento limpiarEstilos">
-                    <div class="elemento_descripcion">salario</div>
+                    <div class="elemento_descripcion">Salario</div>
                     <div class="derecha limpiarEstilos">
                         <div class="elemento_valor">+2,200.00</div>
                         <div class="elemento_eliminar">
@@ -71,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="elemento limpiarEstilos">
+                <div id="limpiar_estilo" class="elemento limpiarEstilos">
                     <div class="elemento_descripcion">Venta Coche</div>
                     <div class="derecha limpiarEstilos">
                         <div class="elemento_valor">+1,500.00</div>
@@ -109,5 +114,7 @@
             </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
